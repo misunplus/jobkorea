@@ -1,0 +1,189 @@
+
+// 모바일
+// >  디자인 받은게 몇배의 해상도인지
+//     - psd를 받을경우만
+//     - 결과가 psd 가로사이즈 / n = 360 or 320
+
+// >만약 피그마, xd, 스케치면 해상도 상관없음
+//     -제플린 or 피드마, xd, 스케치에서 바로 2배이상의 이미지를 export
+
+//사스에서만 적용
+/*css에서도 적용 */
+
+/* 
+변수 가능한범위
+영문
+영문+숫자
+영문특수문자(-,_)숫자
+대소문자
+*/
+html {
+    font-size: 20px;
+}
+body {
+    font-size: 1rem;
+}
+
+$blue: #5f98fc;
+$white: #fff;
+$yellow: #fdfa70;
+$gray: #8d8d8d;
+@mixin hig($h) {
+    height: $h;
+    line-height: $h;
+}
+
+header {
+    padding: 0 0.666rem;
+    background: $blue;
+    h1 {
+        float: left;
+        padding: 0.8333rem 0 0;
+
+        a {
+            display: block;
+            width: 4.9666rem;
+            height: 0.8333rem;
+            background: url("../images/h1_logo.png") no-repeat 0 0 /100% auto;
+        }
+    }
+    .info {
+        float: right;
+        font-size: 0;
+
+        .menu,
+        .mypage {
+            display: inline-block;
+            width: 1.6rem;
+            height: 1.6rem;
+            background: no-repeat center / 0.8333rem auto;
+            margin: 0 0 0 0.7666rem;
+        }
+        .mypage {
+            background-image: url("../images/ico_mypage.png");
+        }
+        .menu {
+            background-image: url("../images/ico_menu.png");
+        }
+    }
+    .search {
+        padding: 0.666rem 0 0;
+        display: flex;
+        input {
+            display: flex;
+            flex: 1;
+            border: none;
+        }
+        button {
+            width: 2.033rem;
+            background: url("../images/ico_search.png") no-repeat $white center / 0.9166rem auto;
+        }
+    }
+    nav ul {
+        display: flex;
+        justify-content: space-between;
+        li {
+            a {
+                display: block;
+                padding: 0 0.3333rem;
+                height: 2.05rem;
+                font-size: 0.66rem;
+                color: $white;
+                transition: all 0.5s;
+                &:hover {
+                    color: $yellow;
+                }
+                &:hover span:before {
+                    width: 100%;
+                }
+                span {
+                    display: block;
+                    padding: 0 0.2rem;
+                    position: relative;
+                    @include hig(2.05rem);
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        width: 0;
+                        height: 3px;
+                        background: $yellow;
+                        transition: all 0.5s;
+                    }
+                }
+            }
+
+        }
+    }
+}
+main {
+    .ad_top {
+        position: relative;
+        height: 7.6833rem;
+        // width: 100% auto;
+        padding: 1.1666rem 0 0;
+        background: url("../images/bg_visual.png") no-repeat center/ 100% auto;
+        text-align: center;
+        .info {
+            em {
+                width: 75%;
+                margin: 0 auto;
+                padding: 0.2666rem 0 0;
+                font-size: 0.5166rem;
+                line-height: 1.1333rem;
+                border-bottom: $gray solid 1px;
+                // padding: .2rem 0 .2rem 0;
+                // font-size: .5166rem;
+                // color: $white;
+                // border-bottom: $gray solid 1px;
+            }
+            p {
+                width: 75%;
+                margin: 0 auto;
+                padding: 0.2833rem 0 0;
+                font-size: 0.9rem;
+                line-height: 1.4rem;
+                // padding: .2833 0 .2833 0;
+                // font-size: .8333rem;
+                // color: $white;
+            }
+            div {
+                display: block;
+                font-size: 0.4166rem;
+                color: $white;
+                text-align: center;
+                span {
+                    padding: 0 0.2333rem;
+                    border-left: 1px solid $gray;
+                }
+                .boderhide {
+                    border: none;
+                }
+            }
+
+        }
+        .allmen {
+            padding: 0.45rem 0.3666rem;
+            // height: 1.3166rem;
+            // width: 2.9333rem;
+            display: block;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            color: $white;
+            font-size: 0.45rem;
+            background: #282725;
+            img {
+                height: 0.4666rem;
+                width: 0.2833rem;
+                padding: 0 0 0.05rem 0.15rem;
+
+            }
+        }
+    }
+}
+
+.border {
+    border-bottom: 5px solid #e9ecee;
+}

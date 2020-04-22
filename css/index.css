@@ -1,0 +1,42 @@
+@charset "UTF-8";
+/*css에서도 적용 */
+/* 
+변수 가능한범위
+영문
+영문+숫자
+영문특수문자(-,_)숫자
+대소문자
+*/
+html { font-size: 20px; }
+
+body { font-size: 1rem; }
+
+header { padding: 0 .666rem 0; background: #5f98fc; }
+header h1 { float: left; padding: .8333rem 0 0; }
+header h1 a { display: block; width: 4.9666rem; height: .8333rem; background: url(../images/h1_logo.png) no-repeat 0 0/100% auto; }
+header .info { float: right; font-size: 0; }
+header .info .mypage, header .info .menu { display: inline-block; width: 1.6rem; height: 1.6rem; background: no-repeat center / .8333rem auto; margin: 0 0 0 .7666rem; }
+header .info .mypage { background-image: url(../images/ico_mypage.png); }
+header .info .menu { background-image: url(../images/ico_menu.png); }
+header .search { padding: .666rem 0 0; display: -webkit-box; display: -ms-flexbox; display: flex; }
+header .search input { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-flex: 1; -ms-flex: 1; flex: 1; border: none; }
+header .search button { width: 2.033rem; background: url(../images/ico_search.png) no-repeat #fff center/0.9166rem auto; }
+header nav ul { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
+header nav ul li a { display: block; padding: 0 .3333rem 0 .3333rem; height: 2.05rem; font-size: 0.66rem; color: #fff; -webkit-transition: all .5s; transition: all .5s; }
+header nav ul li a:hover { color: #fdfa70; }
+header nav ul li a:hover span:before { width: 100%; }
+header nav ul li a span { display: block; padding: 0 .2rem; position: relative; height: 2.05rem; line-height: 2.05rem; }
+header nav ul li a span:before { content: ""; position: absolute; left: 0; bottom: 0; width: 0; height: 3px; background: #fdfa70; -webkit-transition: all .5s; transition: all .5s; }
+
+main .ad_top { position: relative; height: 7.6833rem; padding: 1.1666rem 0 0 0; background: url(../images/bg_visual.png) no-repeat center/100% auto; text-align: center; }
+main .ad_top .info em { width: 75%; margin: 0 auto; padding: .2666rem 0 0; font-size: .5166rem; line-height: 1.1333rem; border-bottom: #8d8d8d solid 1px; }
+main .ad_top .info p { width: 75%; margin: 0 auto; padding: .2833rem 0 0; font-size: .9rem; line-height: 1.4rem; }
+main .ad_top .info div { display: block; font-size: .4166rem; color: #fff; text-align: center; }
+main .ad_top .info div span { padding: 0 .2333rem; border-left: 1px solid #8d8d8d; }
+main .ad_top .info div .boderhide { border: none; }
+main .ad_top .allmen { padding: .45rem .3666rem .45rem; display: block; position: absolute; right: 0; bottom: 0; color: #fff; font-size: .45rem; background: #282725; }
+main .ad_top .allmen img { height: .4666rem; width: .2833rem; padding: 0 0 0.05rem 0.15rem; }
+
+.border { border-bottom: 5px solid #e9ecee; }
+
+/*# sourceMappingURL=index.css.map */
