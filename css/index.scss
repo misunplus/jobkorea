@@ -17,100 +17,38 @@
 영문특수문자(-,_)숫자
 대소문자
 */
-html {
-    font-size: 20px;
-}
-body {
-    font-size: 1rem;
-}
+html {font-size: 20px;}
+body {font-size: 1rem;}
 
 $blue: #5f98fc;
 $white: #fff;
 $yellow: #fdfa70;
 $gray: #8d8d8d;
-@mixin hig($h) {
-    height: $h;
-    line-height: $h;
+@mixin hig($h) {height: $h; line-height: $h;
 }
 
-header {
-    padding: 0 0.666rem;
-    background: $blue;
-    h1 {
-        float: left;
-        padding: 0.8333rem 0 0;
-
-        a {
-            display: block;
-            width: 4.9666rem;
-            height: 0.8333rem;
-            background: url("../images/h1_logo.png") no-repeat 0 0 /100% auto;
+header {padding: 0 0.666rem;background: $blue;
+    h1 {float: left; padding: 0.8333rem 0 0;
+        a {display: block; width: 4.9666rem; height: 0.8333rem; background: url("../images/h1_logo.png") no-repeat 0 0 /100% auto;
         }
     }
-    .info {
-        float: right;
-        font-size: 0;
-
+    .info {float: right; font-size: 0;
         .menu,
-        .mypage {
-            display: inline-block;
-            width: 1.6rem;
-            height: 1.6rem;
-            background: no-repeat center / 0.8333rem auto;
-            margin: 0 0 0 0.7666rem;
-        }
-        .mypage {
-            background-image: url("../images/ico_mypage.png");
-        }
-        .menu {
-            background-image: url("../images/ico_menu.png");
-        }
+        .mypage {display: inline-block; width: 1.6rem; height: 1.6rem; background: no-repeat center / 0.8333rem auto; margin: 0 0 0 0.7666rem;}
+        .mypage {background-image: url("../images/ico_mypage.png");}
+        .menu {background-image: url("../images/ico_menu.png");}
     }
-    .search {
-        padding: 0.666rem 0 0;
-        display: flex;
-        input {
-            display: flex;
-            flex: 1;
-            border: none;
-        }
-        button {
-            width: 2.033rem;
-            background: url("../images/ico_search.png") no-repeat $white center / 0.9166rem auto;
-        }
+    .search {padding: 0.666rem 0 0; display: flex;
+        input { display: flex; flex: 1; border: none;}
+        button { width: 2.033rem; background: url("../images/ico_search.png") no-repeat $white center / 0.9166rem auto;}
     }
-    nav ul {
-        display: flex;
-        justify-content: space-between;
+    nav ul { display: flex; justify-content: space-between;
         li {
-            a {
-                display: block;
-                padding: 0 0.3333rem;
-                height: 2.05rem;
-                font-size: 0.66rem;
-                color: $white;
-                transition: all 0.5s;
-                &:hover {
-                    color: $yellow;
-                }
-                &:hover span:before {
-                    width: 100%;
-                }
-                span {
-                    display: block;
-                    padding: 0 0.2rem;
-                    position: relative;
-                    @include hig(2.05rem);
-                    &:before {
-                        content: "";
-                        position: absolute;
-                        left: 0;
-                        bottom: 0;
-                        width: 0;
-                        height: 3px;
-                        background: $yellow;
-                        transition: all 0.5s;
-                    }
+            a {display: block; padding: 0 0.3333rem; height: 2.05rem; font-size: 0.66rem; color: $white; transition: all 0.5s;
+                &:hover {color: $yellow;}
+                &:hover span:before {width: 100%;}
+                span {display: block; padding: 0 0.2rem; position: relative; @include hig(2.05rem);
+                    &:before {content: ""; position: absolute; left: 0; bottom: 0; background: $yellow; width: 0; height: 3px; transition: all 0.5s;}
                 }
             }
 
@@ -118,50 +56,16 @@ header {
     }
 }
 main {
-    .ad_top {
-        position: relative;
-        height: 7.6833rem;
-        // width: 100% auto;
-        padding: 1.1666rem 0 0;
-        background: url("../images/bg_visual.png") no-repeat center/ 100% auto;
-        text-align: center;
+    .ad_top {position: relative; height: 7.6833rem; padding: 1.1666rem 0 0; background: url("../images/bg_visual.png") no-repeat center/ 100% auto; text-align: center;
         .info {
-            em {
-                width: 75%;
-                margin: 0 auto;
-                padding: 0.2666rem 0 0;
-                font-size: 0.5166rem;
-                line-height: 1.1333rem;
-                border-bottom: $gray solid 1px;
-                // padding: .2rem 0 .2rem 0;
-                // font-size: .5166rem;
-                // color: $white;
-                // border-bottom: $gray solid 1px;
+            em {width: 75%; margin: 0 auto; padding: 0.2666rem 0 0; font-size: 0.5166rem; line-height: 1.1333rem; border-bottom: $gray solid 1px;}
+                // padding: .2rem 0 .2rem 0; font-size: .5166rem; color: $white; border-bottom: $gray solid 1px;  
+            p {width: 75%; margin: 0 auto; padding: 0.2833rem 0 0; font-size: 0.9rem; line-height: 1.4rem;}
+                // padding: .2833 0 .2833 0; font-size: .8333rem; color: $white;
+            div {display: block; font-size: 0.4166rem; color: $white; text-align: center;
+                span { padding: 0 0.2333rem; border-left: 1px solid $gray;}
+                .boderhide { border: none; }
             }
-            p {
-                width: 75%;
-                margin: 0 auto;
-                padding: 0.2833rem 0 0;
-                font-size: 0.9rem;
-                line-height: 1.4rem;
-                // padding: .2833 0 .2833 0;
-                // font-size: .8333rem;
-                // color: $white;
-            }
-            div {
-                display: block;
-                font-size: 0.4166rem;
-                color: $white;
-                text-align: center;
-                span {
-                    padding: 0 0.2333rem;
-                    border-left: 1px solid $gray;
-                }
-                .boderhide {
-                    border: none;
-                }
-            }
-
         }
         .allmen {
             padding: 0.45rem 0.3666rem;
@@ -178,12 +82,30 @@ main {
                 height: 0.4666rem;
                 width: 0.2833rem;
                 padding: 0 0 0.05rem 0.15rem;
-
             }
+        }
+    }
+} 
+
+.search10{position: relative;
+    .more{position: absolute; top:0; right:0; width: 1.73rem; height: 1.73rem;
+    background: url(../images/ico_arrow.png)no-repeat center / .81rem auto; z-index: 10px;}
+}
+
+.slide1{
+    overflow: hidden; height:1.73rem;
+    .swiper-slide{height:1.73rem;
+        a{display: block;  position: relative; padding : 0 3.33rem 0;font-size: .6rem; color: #373737;
+            span{ position: absolute; left: .433rem; top:50%; width: 2.316rem; transform: translateY(-50%);  
+                background:#bcc1c9; font-size: .4rem; color: $white; text-align: center; @include hig(.91rem);}
+            div{line-height: 1.73rem;}
         }
     }
 }
 
+
+
+   
 .border {
     border-bottom: 5px solid #e9ecee;
 }
