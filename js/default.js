@@ -9,8 +9,15 @@ $(document).ready(function(){
         // },
         slidesPerView:'auto',
         autoplay: {delay: 1000,},
-        loop:true
-        
-        
+        loop:true  
+           
     });
+     $(".search10 .more").on("click", function(){
+         $(".search10").toggleClass("on");
+     });
+    
+
 });
+
+
+

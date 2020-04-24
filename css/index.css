@@ -38,11 +38,13 @@ main .ad_top .allmen { padding: 0.45rem 0.3666rem; display: block; position: abs
 main .ad_top .allmen img { height: 0.4666rem; width: 0.2833rem; padding: 0 0 0.05rem 0.15rem; }
 
 .search10 { position: relative; }
-.search10 .more { position: absolute; top: 0; right: 0; width: 1.73rem; height: 1.73rem; background: url(../images/ico_arrow.png) no-repeat center/0.81rem auto; z-index: 10px; }
+.search10 .more { position: absolute; top: 0; right: 0; width: 1.73rem; height: 1.73rem; background: url(../images/ico_arrow.png) no-repeat center/0.81rem auto; z-index: 10; }
+.search10.on .more { -webkit-transform: rotate(180deg); transform: rotate(180deg); }
+.search10.on .slide1 { height: calc(1.73rem*5); }
 
 .slide1 { overflow: hidden; height: 1.73rem; }
 .slide1 .swiper-slide { height: 1.73rem; }
-.slide1 .swiper-slide a { display: block; position: relative; padding: 0 3.33rem 0; font-size: .6rem; color: #373737; }
+.slide1 .swiper-slide a { display: block; position: relative; padding: 0 3.33rem 0 3.33rem; font-size: .6rem; color: #373737; }
 .slide1 .swiper-slide a span { position: absolute; left: .433rem; top: 50%; width: 2.316rem; -webkit-transform: translateY(-50%); transform: translateY(-50%); background: #bcc1c9; font-size: .4rem; color: #fff; text-align: center; height: 0.91rem; line-height: 0.91rem; }
 .slide1 .swiper-slide a div { line-height: 1.73rem; }
 
